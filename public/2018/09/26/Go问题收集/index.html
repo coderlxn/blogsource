@@ -110,25 +110,25 @@
 
 
 
-  <meta name="description" content="Basic js的执行单位为行，一般一行就一个语句，以分号结尾变量 通过var 来生命变量 如果只是声明变量而没有赋值，则该变量的值是undefined JavaScript 是一种动态类型语言，也就是说，变量的类型没有限制，变量可以随时更改类型。 12var a = 1;a = &apos;hello&apos;;  如果使用var重新声明一个已经存在的变量，是无效的  JavaScript 引擎的工作方式是，先解">
-<meta name="keywords" content="javascript">
+  <meta name="description" content="引入当前目录下的其他包如果当前目录不在GoPath中，要引入当前目录的其他包时需要使用相对路径123456import (    &quot;../controllers&quot; //这里就是导入上一级目录中的controllers    &quot;./models&quot; //同一级目录中的models    &quot;./models/entitys&quot; //当前目录下的entitys    &quot;../../routers&quot; //上两">
+<meta name="keywords" content="Golang">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js基础语法">
-<meta property="og:url" content="https://blog.jaxli.com/2018/09/21/js基础语法/index.html">
+<meta property="og:title" content="Go问题收集">
+<meta property="og:url" content="https://blog.jaxli.com/2018/09/26/Go问题收集/index.html">
 <meta property="og:site_name" content="武器大师的备忘录">
-<meta property="og:description" content="Basic js的执行单位为行，一般一行就一个语句，以分号结尾变量 通过var 来生命变量 如果只是声明变量而没有赋值，则该变量的值是undefined JavaScript 是一种动态类型语言，也就是说，变量的类型没有限制，变量可以随时更改类型。 12var a = 1;a = &apos;hello&apos;;  如果使用var重新声明一个已经存在的变量，是无效的  JavaScript 引擎的工作方式是，先解">
+<meta property="og:description" content="引入当前目录下的其他包如果当前目录不在GoPath中，要引入当前目录的其他包时需要使用相对路径123456import (    &quot;../controllers&quot; //这里就是导入上一级目录中的controllers    &quot;./models&quot; //同一级目录中的models    &quot;./models/entitys&quot; //当前目录下的entitys    &quot;../../routers&quot; //上两">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-25T01:14:03.000Z">
+<meta property="og:updated_time" content="2018-09-27T11:53:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js基础语法">
-<meta name="twitter:description" content="Basic js的执行单位为行，一般一行就一个语句，以分号结尾变量 通过var 来生命变量 如果只是声明变量而没有赋值，则该变量的值是undefined JavaScript 是一种动态类型语言，也就是说，变量的类型没有限制，变量可以随时更改类型。 12var a = 1;a = &apos;hello&apos;;  如果使用var重新声明一个已经存在的变量，是无效的  JavaScript 引擎的工作方式是，先解">
+<meta name="twitter:title" content="Go问题收集">
+<meta name="twitter:description" content="引入当前目录下的其他包如果当前目录不在GoPath中，要引入当前目录的其他包时需要使用相对路径123456import (    &quot;../controllers&quot; //这里就是导入上一级目录中的controllers    &quot;./models&quot; //同一级目录中的models    &quot;./models/entitys&quot; //当前目录下的entitys    &quot;../../routers&quot; //上两">
 
 
 
 
 
 
-  <link rel="canonical" href="https://blog.jaxli.com/2018/09/21/js基础语法/"/>
+  <link rel="canonical" href="https://blog.jaxli.com/2018/09/26/Go问题收集/"/>
 
 
 
@@ -138,7 +138,7 @@
   };
 </script>
 
-  <title>js基础语法 | 武器大师的备忘录</title>
+  <title>Go问题收集 | 武器大师的备忘录</title>
   
 
 
@@ -299,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.jaxli.com/2018/09/21/js基础语法/">
+    <link itemprop="mainEntityOfPage" href="https://blog.jaxli.com/2018/09/26/Go问题收集/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jax Li">
@@ -316,7 +316,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">js基础语法
+          <h1 class="post-title" itemprop="name headline">Go问题收集
               
             
           </h1>
@@ -341,7 +341,7 @@
                 
               
 
-              <time title="Created: 2018-09-21 10:43:53" itemprop="dateCreated datePublished" datetime="2018-09-21T10:43:53+08:00">2018-09-21</time>
+              <time title="Created: 2018-09-26 19:50:08" itemprop="dateCreated datePublished" datetime="2018-09-26T19:50:08+08:00">2018-09-26</time>
             
 
             
@@ -358,7 +358,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-25 09:14:03" itemprop="dateModified" datetime="2018-09-25T09:14:03+08:00">2018-09-25</time>
+                <time title="Modified: 2018-09-27 19:53:59" itemprop="dateModified" datetime="2018-09-27T19:53:59+08:00">2018-09-27</time>
               
             
           </span>
@@ -372,8 +372,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/09/21/js基础语法/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2018/09/21/js基础语法/" itemprop="commentCount"></span>
+                <a href="/2018/09/26/Go问题收集/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2018/09/26/Go问题收集/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -401,22 +401,8 @@
       
 
       
-        <h5 id="Basic"><a href="#Basic" class="headerlink" title="Basic"></a>Basic</h5><ul>
-<li>js的执行单位为行，一般一行就一个语句，以分号结尾<h5 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h5></li>
-<li>通过<code>var</code> 来生命变量</li>
-<li>如果只是声明变量而没有赋值，则该变量的值是<code>undefined</code></li>
-<li><p>JavaScript 是一种动态类型语言，也就是说，变量的类型没有限制，变量可以随时更改类型。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">a = <span class="string">'hello'</span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>如果使用var重新声明一个已经存在的变量，是无效的</p>
-</li>
-<li><p>JavaScript 引擎的工作方式是，先解析代码，获取所有被声明的变量，然后再一行一行地运行。这造成的结果，就是所有的变量的声明语句，都会被提升到代码的头部，这就叫做变量提升（hoisting）</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(a);</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>上面代码首先使用console.log方法，在控制台（console）显示变量a的值。这时变量a还没有声明和赋值，所以这是一种错误的做法，但是实际上不会报错。因为存在变量提升，真正运行的是下面的代码。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a;</span><br><span class="line"><span class="built_in">console</span>.log(a);</span><br><span class="line">a = <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+        <h4 id="引入当前目录下的其他包"><a href="#引入当前目录下的其他包" class="headerlink" title="引入当前目录下的其他包"></a>引入当前目录下的其他包</h4><p>如果当前目录不在GoPath中，要引入当前目录的其他包时需要使用相对路径<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> (</span><br><span class="line">    <span class="string">"../controllers"</span> <span class="comment">//这里就是导入上一级目录中的controllers</span></span><br><span class="line">    <span class="string">"./models"</span> <span class="comment">//同一级目录中的models</span></span><br><span class="line">    <span class="string">"./models/entitys"</span> <span class="comment">//当前目录下的entitys</span></span><br><span class="line">    <span class="string">"../../routers"</span> <span class="comment">//上两级目录的routers</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure></p>
+<h4 id="使用routine时，需要注意主线程不能退出"><a href="#使用routine时，需要注意主线程不能退出" class="headerlink" title="使用routine时，需要注意主线程不能退出"></a>使用routine时，需要注意主线程不能退出</h4><p>可以使用sync包中的WaitGroup来阻止线程退出<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">	<span class="string">"sync"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>  &#123;</span><br><span class="line">	<span class="keyword">var</span> waitGroup sync.WaitGroup</span><br><span class="line">	waitGroup.Add(<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>  a := <span class="number">0</span>; a &lt; <span class="number">5</span>; a++ &#123;</span><br><span class="line">		<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">			fmt.Println(<span class="string">"run in function"</span>)</span><br><span class="line">			waitGroup.Done()</span><br><span class="line">		&#125;()</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	waitGroup.Wait()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -437,7 +423,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/javascript/" rel="tag"># javascript</a>
+            <a href="/tags/Golang/" rel="tag"># Golang</a>
           
         </div>
       
@@ -450,8 +436,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/20/Go开源框架/" rel="next" title="Go开源框架">
-                <i class="fa fa-chevron-left"></i> Go开源框架
+              <a href="/2018/09/26/Python问题收集/" rel="next" title="Python问题收集">
+                <i class="fa fa-chevron-left"></i> Python问题收集
               </a>
             
           </div>
@@ -460,8 +446,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/09/21/Python常用库/" rel="prev" title="Python常用库">
-                Python常用库 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/09/27/SQLite-Memo/" rel="prev" title="SQLite Memo">
+                SQLite Memo <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -612,7 +598,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Basic"><span class="nav-number">1.</span> <span class="nav-text">Basic</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#变量"><span class="nav-number">2.</span> <span class="nav-text">变量</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#引入当前目录下的其他包"><span class="nav-number">1.</span> <span class="nav-text">引入当前目录下的其他包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用routine时，需要注意主线程不能退出"><span class="nav-number">2.</span> <span class="nav-text">使用routine时，需要注意主线程不能退出</span></a></li></ol></div>
             
 
           </div>

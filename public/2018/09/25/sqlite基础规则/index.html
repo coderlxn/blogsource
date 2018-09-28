@@ -37,6 +37,8 @@
 
 
 
+  <meta name="google-site-verification" content="oN_XqJuyP2mi7Q1xlMfXieFowZWarX3q2BvAc0CC0iA" />
+
 
 
 
@@ -112,11 +114,11 @@
 <meta name="keywords" content="SQLite">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQLite基础规则">
-<meta property="og:url" content="https://blog.jaxli.com/2018/09/25/sqlite基础规则/index.html">
+<meta property="og:url" content="https://blog.jaxli.com/2018/09/25/SQLite基础规则/index.html">
 <meta property="og:site_name" content="武器大师的备忘录">
 <meta property="og:description" content="数据类型 SQLite使用一个更普遍的动态类型系统，值的类型与值本身是相关的，而不是与它的容器相关 SQLite存储类，每个存储在SQLite数据库中的值都属于以下存储类之一： NULL    值是一个NULL值 INTEGER        值是一个带符号的整数，根据值的大小存储在1、2、3、4、6、或8字节中 REAL    值是一个浮点值，存储为8字节的IEEE浮点数字 TEXT    值是">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-25T06:19:32.000Z">
+<meta property="og:updated_time" content="2018-09-25T12:04:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQLite基础规则">
 <meta name="twitter:description" content="数据类型 SQLite使用一个更普遍的动态类型系统，值的类型与值本身是相关的，而不是与它的容器相关 SQLite存储类，每个存储在SQLite数据库中的值都属于以下存储类之一： NULL    值是一个NULL值 INTEGER        值是一个带符号的整数，根据值的大小存储在1、2、3、4、6、或8字节中 REAL    值是一个浮点值，存储为8字节的IEEE浮点数字 TEXT    值是">
@@ -126,7 +128,7 @@
 
 
 
-  <link rel="canonical" href="https://blog.jaxli.com/2018/09/25/sqlite基础规则/"/>
+  <link rel="canonical" href="https://blog.jaxli.com/2018/09/25/SQLite基础规则/"/>
 
 
 
@@ -228,6 +230,22 @@
         
         
           
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />About</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
+  </li>
+        
+        
+        
+          
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
@@ -281,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.jaxli.com/2018/09/25/sqlite基础规则/">
+    <link itemprop="mainEntityOfPage" href="https://blog.jaxli.com/2018/09/25/SQLite基础规则/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jax Li">
@@ -323,7 +341,7 @@
                 
               
 
-              <time title="Created: 2018-09-25 09:24:38 / Modified: 14:19:32" itemprop="dateCreated datePublished" datetime="2018-09-25T09:24:38+08:00">2018-09-25</time>
+              <time title="Created: 2018-09-25 09:24:38 / Modified: 20:04:10" itemprop="dateCreated datePublished" datetime="2018-09-25T09:24:38+08:00">2018-09-25</time>
             
 
             
@@ -342,8 +360,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/09/25/sqlite基础规则/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2018/09/25/sqlite基础规则/" itemprop="commentCount"></span>
+                <a href="/2018/09/25/SQLite基础规则/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2018/09/25/SQLite基础规则/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -396,13 +414,13 @@
 <li>一个具有空存储类型的值被认为小于任何值（包括另外一个具有空存储类型的值）</li>
 <li>一个整数值或实数值小于任何文本值和BLOB值。 当一个整数或实数和另一个整数或实数相比较的时候，则按照实际数值来比较。</li>
 <li>一个文本值小于BLOB值。当两个文本值相比较的时候，则用C语言类库中的memcmp()函数来比较。然而，有时候也不是这样的，比如在下面所描述的“用户定义的整理顺序”情况下。</li>
-<li>当两个BLOB文本被比较的时候，结果决定于memcmp()函数。<h5 id="备份机制"><a href="#备份机制" class="headerlink" title="备份机制"></a>备份机制</h5>在命令提示符中使用 SQLite .dump 点命令来导出完整的数据库在一个文本文件中<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sqlite3 testDB.db .dump &gt; testDB.sql</span><br></pre></td></tr></table></figure>
-</li>
+<li>当两个BLOB文本被比较的时候，结果决定于memcmp()函数。</li>
 </ol>
 </li>
 </ol>
 </li>
 </ul>
+<h5 id="备份机制"><a href="#备份机制" class="headerlink" title="备份机制"></a>备份机制</h5><p>在命令提示符中使用 SQLite .dump 点命令来导出完整的数据库在一个文本文件中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sqlite3 testDB.db .dump &gt; testDB.sql</span><br></pre></td></tr></table></figure></p>
 <p>从生成的sql文件恢复<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sqlite3 testDB.db &lt; testDB.sql</span><br></pre></td></tr></table></figure></p>
 
       
@@ -526,7 +544,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -538,7 +556,7 @@
                 
                 
                 <div class="site-state-item site-state-tags">
-                  
+                  <a href="/tags/index.html">
                     
                     
                       
@@ -551,7 +569,7 @@
                     
                     <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">tags</span>
-                  
+                  </a>
                 </div>
               
             </nav>

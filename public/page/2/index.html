@@ -110,28 +110,20 @@
 
 
 
-  <meta name="description" content="在语言层面上提供并发和传值能力123456789101112131415161718192021package mainimport &quot;fmt&quot;func sum(a []int, result chan int)  &amp;#123;	sum := 0	for _, v := range a &amp;#123;		sum += v	&amp;#125;	result &amp;lt;- sum&amp;#125;func main(">
-<meta name="keywords" content="Golang">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Just Go">
-<meta property="og:url" content="https://blog.jaxli.com/2018/09/19/Just-Go/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="武器大师的备忘录">
+<meta property="og:url" content="https://blog.jaxli.com/page/2/index.html">
 <meta property="og:site_name" content="武器大师的备忘录">
-<meta property="og:description" content="在语言层面上提供并发和传值能力123456789101112131415161718192021package mainimport &quot;fmt&quot;func sum(a []int, result chan int)  &amp;#123;	sum := 0	for _, v := range a &amp;#123;		sum += v	&amp;#125;	result &amp;lt;- sum&amp;#125;func main(">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://s1.ax1x.com/2018/09/20/inC6Mt.png">
-<meta property="og:image" content="https://s1.ax1x.com/2018/09/20/inPskF.md.png">
-<meta property="og:updated_time" content="2018-09-25T12:02:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Just Go">
-<meta name="twitter:description" content="在语言层面上提供并发和传值能力123456789101112131415161718192021package mainimport &quot;fmt&quot;func sum(a []int, result chan int)  &amp;#123;	sum := 0	for _, v := range a &amp;#123;		sum += v	&amp;#125;	result &amp;lt;- sum&amp;#125;func main(">
-<meta name="twitter:image" content="https://s1.ax1x.com/2018/09/20/inC6Mt.png">
+<meta name="twitter:title" content="武器大师的备忘录">
 
 
 
 
 
 
-  <link rel="canonical" href="https://blog.jaxli.com/2018/09/19/Just-Go/"/>
+  <link rel="canonical" href="https://blog.jaxli.com/page/2/"/>
 
 
 
@@ -141,7 +133,7 @@
   };
 </script>
 
-  <title>Just Go | 武器大师的备忘录</title>
+  <title>武器大师的备忘录</title>
   
 
 
@@ -188,7 +180,8 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -285,9 +278,9 @@
           
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -319,7 +312,11 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Just Go
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/19/Just-Go/" itemprop="url">
+                  Just Go
+                </a>
               
             
           </h1>
@@ -404,7 +401,9 @@
       
 
       
-        <h5 id="在语言层面上提供并发和传值能力"><a href="#在语言层面上提供并发和传值能力" class="headerlink" title="在语言层面上提供并发和传值能力"></a>在语言层面上提供并发和传值能力</h5><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">sum</span><span class="params">(a []<span class="keyword">int</span>, result <span class="keyword">chan</span> <span class="keyword">int</span>)</span></span>  &#123;</span><br><span class="line">	sum := <span class="number">0</span></span><br><span class="line">	<span class="keyword">for</span> _, v := <span class="keyword">range</span> a &#123;</span><br><span class="line">		sum += v</span><br><span class="line">	&#125;</span><br><span class="line">	result &lt;- sum</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>  &#123;</span><br><span class="line">	a := []<span class="keyword">int</span>&#123;<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">10</span>, <span class="number">-5</span>, <span class="number">1</span>, <span class="number">0</span>&#125;</span><br><span class="line">	result := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">int</span>)</span><br><span class="line">	<span class="keyword">go</span> sum(a[:<span class="built_in">len</span>(a)/<span class="number">2</span>], result)</span><br><span class="line">	<span class="keyword">go</span> sum(a[<span class="built_in">len</span>(a)/<span class="number">2</span>:], result)</span><br><span class="line">	x, y := &lt;-result, &lt;-result</span><br><span class="line"></span><br><span class="line">	fmt.Println(x, y, x+y)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          
+            <h5 id="在语言层面上提供并发和传值能力"><a href="#在语言层面上提供并发和传值能力" class="headerlink" title="在语言层面上提供并发和传值能力"></a>在语言层面上提供并发和传值能力</h5><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">sum</span><span class="params">(a []<span class="keyword">int</span>, result <span class="keyword">chan</span> <span class="keyword">int</span>)</span></span>  &#123;</span><br><span class="line">	sum := <span class="number">0</span></span><br><span class="line">	<span class="keyword">for</span> _, v := <span class="keyword">range</span> a &#123;</span><br><span class="line">		sum += v</span><br><span class="line">	&#125;</span><br><span class="line">	result &lt;- sum</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>  &#123;</span><br><span class="line">	a := []<span class="keyword">int</span>&#123;<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">10</span>, <span class="number">-5</span>, <span class="number">1</span>, <span class="number">0</span>&#125;</span><br><span class="line">	result := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">int</span>)</span><br><span class="line">	<span class="keyword">go</span> sum(a[:<span class="built_in">len</span>(a)/<span class="number">2</span>], result)</span><br><span class="line">	<span class="keyword">go</span> sum(a[<span class="built_in">len</span>(a)/<span class="number">2</span>:], result)</span><br><span class="line">	x, y := &lt;-result, &lt;-result</span><br><span class="line"></span><br><span class="line">	fmt.Println(x, y, x+y)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h5 id="使用组合而不是继承来扩展功能"><a href="#使用组合而不是继承来扩展功能" class="headerlink" title="使用组合而不是继承来扩展功能"></a>使用组合而不是继承来扩展功能</h5><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Phone <span class="keyword">interface</span> &#123;</span><br><span class="line">	call()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> NokiaPhone <span class="keyword">struct</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(nokiaPhone NokiaPhone)</span> <span class="title">call</span><span class="params">()</span></span>  &#123;</span><br><span class="line">	fmt.Println(<span class="string">"I am Nokia, I can call you!"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> IPhone <span class="keyword">struct</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(iPhone IPhone)</span> <span class="title">call</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">"I am iPhone, I can call you!"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>  &#123;</span><br><span class="line">	<span class="keyword">var</span> phone Phone</span><br><span class="line"></span><br><span class="line">	phone = <span class="built_in">new</span>(NokiaPhone)</span><br><span class="line">	phone.call()</span><br><span class="line"></span><br><span class="line">	phone = <span class="built_in">new</span>(IPhone)</span><br><span class="line">	phone.call()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h5 id="导入包的时候，会默认在main方法前调用init方法。可以保证某些功能得到初始化"><a href="#导入包的时候，会默认在main方法前调用init方法。可以保证某些功能得到初始化" class="headerlink" title="导入包的时候，会默认在main方法前调用init方法。可以保证某些功能得到初始化"></a>导入包的时候，会默认在main方法前调用init方法。可以保证某些功能得到初始化</h5><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"><span class="keyword">import</span> &#123;</span><br><span class="line">	<span class="string">"database/sql"</span></span><br><span class="line">	_ <span class="string">"github.com/goinaction/code/chapter3/dbdriver/postgres"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	sql.Open(<span class="string">"postgres"</span>, <span class="string">"mydb"</span>)   <span class="comment">//之所以能够使用，是因为postgres中通过init将自身注册到了sql包</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h5 id="数组字面量"><a href="#数组字面量" class="headerlink" title="数组字面量"></a>数组字面量</h5><p>数组字面量允许声明数组里元素数量同时指定每个元素的值<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">array := [<span class="number">5</span>]<span class="keyword">int</span>&#123;<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>&#125;</span><br><span class="line"><span class="comment">// 容量由初始化值的数量决定</span></span><br><span class="line">array := [...]<span class="keyword">int</span>&#123;<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>&#125;</span><br><span class="line"><span class="comment">//只初始化部分元素</span></span><br><span class="line">array := [<span class="number">4</span>][<span class="number">2</span>]<span class="keyword">int</span>&#123;<span class="number">1</span>: &#123;<span class="number">0</span>: <span class="number">20</span>&#125;, <span class="number">3</span>: &#123;<span class="number">1</span>: <span class="number">41</span>&#125;&#125;</span><br></pre></td></tr></table></figure></p>
@@ -424,6 +423,8 @@
 <li>将切片或者映射传递给函数成本很小，并且不会复制底层的数据结构</li>
 </ul>
 
+          
+        
       
     </div>
 
@@ -441,40 +442,14 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Golang/" rel="tag"># Golang</a>
-          
-        </div>
+
+      
+
       
 
       
       
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/09/19/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/20/Go开源框架/" rel="prev" title="Go开源框架">
-                Go开源框架 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -484,18 +459,172 @@
   </article>
 
 
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.jaxli.com/2018/09/19/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jax Li">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/jax.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="武器大师的备忘录">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/19/hello-world/" itemprop="url">
+                  Hello World
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-09-19 17:18:10" itemprop="dateCreated datePublished" datetime="2018-09-19T17:18:10+08:00">2018-09-19</time>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/09/19/hello-world/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2018/09/19/hello-world/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
           
-
-  
-    <div class="comments" id="comments">
-    </div>
-  
-
-
 
         </div>
         
@@ -516,17 +645,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -608,22 +728,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#在语言层面上提供并发和传值能力"><span class="nav-number">1.</span> <span class="nav-text">在语言层面上提供并发和传值能力</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#使用组合而不是继承来扩展功能"><span class="nav-number">2.</span> <span class="nav-text">使用组合而不是继承来扩展功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#导入包的时候，会默认在main方法前调用init方法。可以保证某些功能得到初始化"><span class="nav-number">3.</span> <span class="nav-text">导入包的时候，会默认在main方法前调用init方法。可以保证某些功能得到初始化</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#数组字面量"><span class="nav-number">4.</span> <span class="nav-text">数组字面量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#切片长度和容量的区别"><span class="nav-number">5.</span> <span class="nav-text">切片长度和容量的区别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#切片增长"><span class="nav-number">6.</span> <span class="nav-text">切片增长</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#数组和切片"><span class="nav-number">7.</span> <span class="nav-text">数组和切片</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -754,10 +858,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.4.1"></script>
-
-
 
   
 

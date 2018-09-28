@@ -81,3 +81,6 @@ deploy:
   type: git
   repo: https://github.com/coderlxn/coderlxn.github.com.git
   branch: master
+
+# Google sitemap
+google_site_verification: oN_XqJuyP2mi7Q1xlMfXieFowZWarX3q2BvAc0CC0iA
