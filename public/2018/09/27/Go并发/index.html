@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="">
+<html class="theme-next gemini use-motion" lang="">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -86,7 +86,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Gemini',
     version: '6.4.1',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
@@ -110,14 +110,18 @@
 
 
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="竟态问题的解决方案 原子函数原子函数可以保证某个操作的原子性，避免产生竟态 1234567891011121314151617181920212223242526272829303132333435363738394041package mainimport (	&quot;fmt&quot;	&quot;sync&quot;	&quot;sync/atomic&quot;	&quot;time&quot;)var (	shutdown int64	wg1 sync.Wait">
+<meta name="keywords" content="Golang">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Go并发">
 <meta property="og:url" content="https://blog.jaxli.com/2018/09/27/Go并发/index.html">
 <meta property="og:site_name" content="武器大师的备忘录">
+<meta property="og:description" content="竟态问题的解决方案 原子函数原子函数可以保证某个操作的原子性，避免产生竟态 1234567891011121314151617181920212223242526272829303132333435363738394041package mainimport (	&quot;fmt&quot;	&quot;sync&quot;	&quot;sync/atomic&quot;	&quot;time&quot;)var (	shutdown int64	wg1 sync.Wait">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-27T13:13:59.000Z">
+<meta property="og:updated_time" content="2018-09-29T14:05:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Go并发">
+<meta name="twitter:description" content="竟态问题的解决方案 原子函数原子函数可以保证某个操作的原子性，避免产生竟态 1234567891011121314151617181920212223242526272829303132333435363738394041package mainimport (	&quot;fmt&quot;	&quot;sync&quot;	&quot;sync/atomic&quot;	&quot;time&quot;)var (	shutdown int64	wg1 sync.Wait">
 
 
 
@@ -253,9 +257,6 @@
   
 
   
-    
-
-  
 
   
 </nav>
@@ -275,6 +276,9 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
           
           <div id="content" class="content">
             
@@ -341,6 +345,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-09-29 22:05:31" itemprop="dateModified" datetime="2018-09-29T22:05:31+08:00">2018-09-29</time>
+              
+            
           </span>
 
           
@@ -381,7 +401,14 @@
       
 
       
-        
+        <h4 id="竟态问题的解决方案"><a href="#竟态问题的解决方案" class="headerlink" title="竟态问题的解决方案"></a>竟态问题的解决方案</h4><ul>
+<li><p>原子函数<br>原子函数可以保证某个操作的原子性，避免产生竟态</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">	<span class="string">"sync"</span></span><br><span class="line">	<span class="string">"sync/atomic"</span></span><br><span class="line">	<span class="string">"time"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> (</span><br><span class="line">	shutdown <span class="keyword">int64</span></span><br><span class="line">	wg1 sync.WaitGroup</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>  &#123;</span><br><span class="line">	wg1.Add(<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">go</span> doWork(<span class="string">"A"</span>)</span><br><span class="line">	<span class="keyword">go</span> doWork(<span class="string">"B"</span>)</span><br><span class="line"></span><br><span class="line">	time.Sleep(<span class="number">1</span> * time.Second)</span><br><span class="line"></span><br><span class="line">	fmt.Println(<span class="string">"Shutdown now"</span>)</span><br><span class="line">	atomic.StoreInt64(&amp;shutdown, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">	wg1.Wait()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">doWork</span><span class="params">(name <span class="keyword">string</span>)</span></span>  &#123;</span><br><span class="line">	<span class="keyword">defer</span> wg1.Done()</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> &#123;</span><br><span class="line">		fmt.Printf(<span class="string">"Doing %s Work\n"</span>, name)</span><br><span class="line">		time.Sleep(<span class="number">250</span> * time.Millisecond)</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> atomic.LoadInt64(&amp;shutdown) == <span class="number">1</span> &#123;</span><br><span class="line">			fmt.Printf(<span class="string">"Shutting %s Down\n"</span>, name)</span><br><span class="line">			<span class="keyword">break</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>互斥锁</p>
+</li>
+</ul>
+
       
     </div>
 
@@ -398,6 +425,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Golang/" rel="tag"># Golang</a>
+          
+        </div>
       
 
       
@@ -417,6 +450,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/30/MySQL基本数据类型/" rel="prev" title="MySQL基本数据类型">
+                MySQL基本数据类型 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -464,8 +501,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -484,7 +530,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -507,7 +553,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -548,6 +596,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#竟态问题的解决方案"><span class="nav-number">1.</span> <span class="nav-text">竟态问题的解决方案</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -583,7 +647,7 @@
 
 
 
-  <div class="theme-info">Theme – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Muse</a> v6.4.1</div>
+  <div class="theme-info">Theme – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Gemini</a> v6.4.1</div>
 
 
 
@@ -675,6 +739,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.1"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.1"></script>

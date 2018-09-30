@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="">
+<html class="theme-next gemini use-motion" lang="">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -86,7 +86,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Gemini',
     version: '6.4.1',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
@@ -118,7 +118,7 @@
 <meta property="og:site_name" content="武器大师的备忘录">
 <meta property="og:description" content="约束 NOT NULL         确保某列不能有NULL值 DEFAULT        当某列没有指定值时，为该列提供默认值 UNIQUE        某列中所有值是不同的 PRIMARY KEY     唯一标志数据库各行 CHECK            确保某列所有值满足一定条件  JOINJOIN子句用于结合两个或多个数据库中表的记录。JOIN是一种通过共同值来结合两个表中字段的">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-27T02:34:57.000Z">
+<meta property="og:updated_time" content="2018-09-28T06:08:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQLite高级语法">
 <meta name="twitter:description" content="约束 NOT NULL         确保某列不能有NULL值 DEFAULT        当某列没有指定值时，为该列提供默认值 UNIQUE        某列中所有值是不同的 PRIMARY KEY     唯一标志数据库各行 CHECK            确保某列所有值满足一定条件  JOINJOIN子句用于结合两个或多个数据库中表的记录。JOIN是一种通过共同值来结合两个表中字段的">
@@ -257,9 +257,6 @@
   
 
   
-    
-
-  
 
   
 </nav>
@@ -279,6 +276,9 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
           
           <div id="content" class="content">
             
@@ -358,7 +358,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-27 10:34:57" itemprop="dateModified" datetime="2018-09-27T10:34:57+08:00">2018-09-27</time>
+                <time title="Modified: 2018-09-28 14:08:08" itemprop="dateModified" datetime="2018-09-28T14:08:08+08:00">2018-09-28</time>
               
             
           </span>
@@ -431,7 +431,7 @@
 <li>BEFORE 或 AFTER 关键字决定何时执行触发器动作，决定是在关联行的插入、修改或删除之前或者之后执行触发器动作。</li>
 <li>当触发器相关联的表删除时，自动删除触发器（Trigger）。</li>
 <li>要修改的表必须存在于同一数据库中，作为触发器被附加的表或视图，且必须只使用 tablename，而不是 database.tablename。</li>
-<li>一个特殊的 SQL 函数 RAISE() 可用于触发器程序内抛出异常。</li>
+<li>一个特殊的 SQL 函数 RAISE() 可用于触发器程序内抛出异常。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">create trigger audit_log after insert on COMPANY</span><br><span class="line">begin</span><br><span class="line">	insert into AUDIT(EMP_ID, ENTRY_DATE) VALUES (new.ID, datetime(&apos;now&apos;));</span><br><span class="line">end</span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
@@ -555,7 +555,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -578,7 +578,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -670,7 +672,7 @@
 
 
 
-  <div class="theme-info">Theme – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Muse</a> v6.4.1</div>
+  <div class="theme-info">Theme – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Gemini</a> v6.4.1</div>
 
 
 
@@ -762,6 +764,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.1"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.1"></script>

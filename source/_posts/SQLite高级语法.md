@@ -52,3 +52,9 @@ NULL 是用来表示一个缺失值的项。表中的一个 NULL 值是在字段
 * 当触发器相关联的表删除时，自动删除触发器（Trigger）。
 * 要修改的表必须存在于同一数据库中，作为触发器被附加的表或视图，且必须只使用 tablename，而不是 database.tablename。
 * 一个特殊的 SQL 函数 RAISE() 可用于触发器程序内抛出异常。
+```
+create trigger audit_log after insert on COMPANY
+begin
+	insert into AUDIT(EMP_ID, ENTRY_DATE) VALUES (new.ID, datetime('now'));
+end
+```
