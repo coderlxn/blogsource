@@ -4,12 +4,12 @@
 
 # Site
 title: 武器大师的备忘录
-subtitle:
-description:
-keywords:
+subtitle: 胜无以言得，败无以言免
+description: 武器大师的备忘录
+keywords: Golang, Python, SQL
 author: Jax Li
-language:
-timezone:
+language: zh-CN
+timezone: 
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
