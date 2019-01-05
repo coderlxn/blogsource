@@ -143,3 +143,7 @@ yield 是一个类似 return 的关键字，只是这个函数返回的是个生
 当你调用这个函数的时候，函数内部的代码并不立马执行 ，这个函数只是返回一个生成器对象
 
 #### Process的start会启动线程，但线程中的内容不会执行，需要join之后才会执行。必须要start之后才能调用join
+
+#### Python不支持对于metaclass的多重继承
+如果存在多重继承的情况，会抛出异常
+TypeError: Error when calling the metaclass bases metaclass conflict: the metaclass of a derived class must be a (non-strict) subclass of the metaclasses of all its bases
